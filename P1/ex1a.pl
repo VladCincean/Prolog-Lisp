@@ -33,7 +33,7 @@ lcm(A, B, M) :-
 % R = the lowest common multiple of the list L
 % flow model: (i o), (i i)
 lcm_list([], 0).
-lcm_list([E], E):- !.
+lcm_list([E], E) :- !.
 lcm_list([H|T], R) :-
 	lcm_list(T, Rt),
 	lcm(H, Rt, R).
